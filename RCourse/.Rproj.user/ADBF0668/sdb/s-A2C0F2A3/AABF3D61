@@ -1,0 +1,17 @@
+{
+    "contents" : "add2 = function(x,y){\n  x + y\n}\n\ncolomnMean = function(x){\n  nc = ncol(x)\n  means = numeric(nc)\n  for(i in 1:nc){\n    means[i] = mean(x[,i])\n  }\n  \n  means\n}\n\n\n\ndirectory = \"C:/Users/Nip/Documents/Coursera/data/specdata\"\na = read.csv(directory)\nmean(a[,'sulfate'],na.rm = TRUE)\n\npollutantmean(directory,'sulfate')\n\ncomplete(directory)\n\n\n",
+    "created" : 1426073371590.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4154889411",
+    "id" : "AABF3D61",
+    "lastKnownWriteTime" : 1426146345,
+    "path" : "~/Coursera/git/RCourse/sample1.R",
+    "project_path" : "sample1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
