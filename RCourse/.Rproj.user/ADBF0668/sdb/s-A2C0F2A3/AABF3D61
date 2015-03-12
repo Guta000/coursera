@@ -1,13 +1,13 @@
 {
-    "contents" : "add2 = function(x,y){\n  x + y\n}\n\ncolomnMean = function(x){\n  nc = ncol(x)\n  means = numeric(nc)\n  for(i in 1:nc){\n    means[i] = mean(x[,i])\n  }\n  \n  means\n}\n\n\n\ndirectory = \"C:/Users/Nip/Documents/Coursera/data/specdata\"\na = read.csv(directory)\nmean(a[,'sulfate'],na.rm = TRUE)\n\npollutantmean(directory,'sulfate')\n\ncomplete(directory)\n\n\n",
+    "contents" : "directory = \"specdata\"\n\nsource(\"pollutantmean.R\")\nsource(\"complete.R\")\nsource(\"corr.R\")\n\n\npollutantmean(directory,'sulfate')\n\npollutantmean(directory, \"sulfate\", 1:10)\npollutantmean(directory, \"nitrate\", 70:72)\npollutantmean(directory, \"nitrate\", 23)\n\ncomplete(directory, 1)\ncomplete(directory,c(2, 4, 8, 10, 12))\ncomplete(directory, 30:25)\ncomplete(directory, 3)\n\n\n",
     "created" : 1426073371590.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "4154889411",
+    "hash" : "2248652282",
     "id" : "AABF3D61",
-    "lastKnownWriteTime" : 1426146345,
-    "path" : "~/Coursera/git/RCourse/sample1.R",
+    "lastKnownWriteTime" : 1426148160,
+    "path" : "~/Coursera/git/coursera/RCourse/sample1.R",
     "project_path" : "sample1.R",
     "properties" : {
         "tempName" : "Untitled1"

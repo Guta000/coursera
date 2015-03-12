@@ -1,25 +1,19 @@
-add2 = function(x,y){
-  x + y
-}
+directory = "specdata"
 
-colomnMean = function(x){
-  nc = ncol(x)
-  means = numeric(nc)
-  for(i in 1:nc){
-    means[i] = mean(x[,i])
-  }
-  
-  means
-}
+source("pollutantmean.R")
+source("complete.R")
+source("corr.R")
 
-
-
-directory = "C:/Users/Nip/Documents/Coursera/data/specdata"
-a = read.csv(directory)
-mean(a[,'sulfate'],na.rm = TRUE)
 
 pollutantmean(directory,'sulfate')
 
-complete(directory)
+pollutantmean(directory, "sulfate", 1:10)
+pollutantmean(directory, "nitrate", 70:72)
+pollutantmean(directory, "nitrate", 23)
+
+complete(directory, 1)
+complete(directory,c(2, 4, 8, 10, 12))
+complete(directory, 30:25)
+complete(directory, 3)
 
 
