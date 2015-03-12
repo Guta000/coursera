@@ -2,12 +2,20 @@ corr <- function(directory, threshold = 0) {
         
         correlations = numeric()
         
-        for (i in id){
-                fileName = file.path(directory, sprintf("%03d.csv", i))
+        files = list.files(directory)
+        
+        for (file in files){
+                fileName = file.path(directory, file)
                 data = read.csv(fileName)
                 
-                if (sum(complete.cases(data))>threshold){}
+                is.complete = complete.cases(data)
+                
+                if (sum(is.complete) > threshold){
+                        data.cor = cor(data$sulfate, data$nitrate, use = "complete.obs")
+                        correlations = c(correlations,data.cor)
+                }
                 
         }
         
+        correlations
 }
